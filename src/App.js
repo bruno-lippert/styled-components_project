@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./theme";
+import "./App.css";
+import Index from "./pages";
+import { useState } from "react";
+import teste from "../src/images/logoDark.png"
 
-function App() {
+export default function App() {
+  const [isDark, setIsDark] = useState(true);
+
+  const theme = isDark === true ? darkTheme : lightTheme;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme} className="App">
+      <Index isDark={isDark} setIsDark={setIsDark} />
+    </ThemeProvider>
   );
 }
-
-export default App;
