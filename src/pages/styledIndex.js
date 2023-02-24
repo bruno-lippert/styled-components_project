@@ -8,5 +8,6 @@ export const Main = styled.main`
 
     @media (max-width: 899px) {
         height: auto;
+        height: 100vh;
     }
 `;
