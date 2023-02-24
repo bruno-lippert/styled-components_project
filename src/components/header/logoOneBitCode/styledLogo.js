@@ -15,6 +15,7 @@ export const StyledLogo = styled.div`
   justify-content: center;
   .imgLogo {
       width: 80%;
+      min-width: 250px;
     }
 }
 `;

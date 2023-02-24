@@ -9,6 +9,10 @@ export const StyledHeader = styled.header`
   @media (max-width: 660px) {
     flex-direction: column;
     align-items: center;
-    height: auto;
+    height: 105px;
+  }
+
+  @media (max-width: 430px) {
+    height: 190px;
   }
 `;
